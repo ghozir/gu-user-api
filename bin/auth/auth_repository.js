@@ -1,5 +1,5 @@
 const config = require('../infra/configs/global_config');
-const _ = require('lodash');
+
 class User {
   constructor(username, password) {
     this.username = username;
@@ -7,8 +7,7 @@ class User {
   }
 
   isValidPassword(password) {
-    let checkPass = this.password.find(element => element.password == password);
-    return !_.isEmpty(checkPass);
+    return this.password === password;
   }
 }
 
@@ -22,6 +21,6 @@ module.exports.findByUsername = (username, cb) => {
     }
     return '';
   });
-  const user = new User(userData[0].username, userData);
+  const user = new User(userData[0].username, userData[0].password);
   cb(user);
 };

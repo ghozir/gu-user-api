@@ -73,7 +73,7 @@ describe('Mongodb', () => {
         }
       });
       const res = await Mongo.prototype.findOne({});
-      assert.strictEqual(res.data, undefined);
+      assert.strictEqual(res.data, null);
       stubDb.restore();
     });
     it('should return wrapper data when findOne success', async () => {
@@ -378,7 +378,8 @@ describe('Mongodb', () => {
           };
         }
       });
-      await Mongo.prototype.updateOne({data: 'data'});
+      const res = await Mongo.prototype.updateOne({data: 'data'});
+      assert.strictEqual(res.err, 'Failed updating data');
       stubDb.restore();
     });
     it('should return wrapper data when updateOne success', async () => {

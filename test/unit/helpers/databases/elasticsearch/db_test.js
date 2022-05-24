@@ -213,7 +213,7 @@ describe('Elastic DB', () => {
         search: sinon.stub().yields(null, data)
       });
       const res = await helperElastic.findOne(esHost, {});
-      expect(res.data).to.equal(undefined);
+      expect(res.data).to.equal(null);
     });
   });
 

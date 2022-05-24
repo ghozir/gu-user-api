@@ -1,10 +1,10 @@
 const configs = require('./bin/infra/configs/global_config');
 
 module.exports = {
-  apps : [{
-    name: 'app',
-    script: './index.js',
+  apps: [{
+    name: 'notice-api',
+    script: 'index.js',
     exec_mode: 'cluster',
-    instances: configs.get('/cluster') || 2
+    instances: configs.get('/cluster')
   }]
 };

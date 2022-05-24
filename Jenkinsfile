@@ -8,7 +8,7 @@ pipeline {
         string(name: 'STAGING_NAMESPACE',          description: 'Staging Namespace',                    defaultValue: 'core-tribe-edu-stage')
         string(name: 'DEVELOPMENT_NAMESPACE',      description: 'Development Namespace',                defaultValue: 'core-tribe-edu-dev')
 
-        string(name: 'DOCKER_IMAGE_NAME',          description: 'Docker Image Name',                    defaultValue: 'core-edu-pijar-auth-api')
+        string(name: 'DOCKER_IMAGE_NAME',          description: 'Docker Image Name',                    defaultValue: 'core-edu-pijar-notice-api')
 
         string(name: 'CHAT_ID',                    description: 'chat id of telegram group',            defaultValue: '-1001215679728')
     }
@@ -62,7 +62,7 @@ pipeline {
                             echo "Do Unit Test Here"
                             def node = tool name: 'NodeJS-12', type: 'jenkins.plugins.nodejs.tools.NodeJSInstallation'
                             env.PATH = "${node}/bin:${env.PATH}"
-                            sh "npm install --legacy-peer-deps"
+                            sh "npm install"
                             sh "npm run cover"
                             echo "defining sonar-scanner"
                             def scannerHome = tool 'SonarScanner' ;

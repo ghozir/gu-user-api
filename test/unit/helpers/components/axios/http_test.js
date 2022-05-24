@@ -75,7 +75,7 @@ describe('Axios HTTP', () => {
       const http = new Http();
       const result = await http.get('/foo');
 
-      assert.strictEqual(result.data, result.data);
+      assert.strictEqual(result.data, null);
       assert.strictEqual(result.err.message, 'dummy error');
     });
   });
@@ -106,7 +106,7 @@ describe('Axios HTTP', () => {
       const http = new Http();
       const result = await http.post('/foo');
 
-      assert.strictEqual(result.data, result.data);
+      assert.strictEqual(result.data, null);
       assert.strictEqual(result.err.message, 'dummy error');
     });
   });

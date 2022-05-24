@@ -19,7 +19,7 @@ const createConnectionPool = async (config) => {
 const getConnection = async (config) => {
   const currConnection = connectionPool.filter(conf => conf.config.toString() === config.toString());
   let conn;
-  currConnection.forEach((obj,i) => {
+  currConnection.map((obj,i) => {
     if(i === 0){
       const { connection } = obj;
       conn = connection;

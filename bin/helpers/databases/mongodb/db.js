@@ -1,8 +1,8 @@
+
 const validate = require('validate.js');
 const mongoConnection = require('./connection');
 const wrapper = require('../../utils/wrapper');
 const logger = require('../../utils/logger');
-const { NotFoundError } = require('../../error');
 
 class DB {
   constructor(config, dbName) {
@@ -36,7 +36,7 @@ class DB {
       const db = connection.collection(this.collectionName);
       const recordset = await db.findOne(params);
       if (validate.isEmpty(recordset)) {
-        return wrapper.error(new NotFoundError('Data Not Found !'));
+        return wrapper.data(null);
       }
       return wrapper.data(recordset);
 
@@ -165,11 +165,11 @@ class DB {
       const connection = cacheConnection.db(dbName);
       const db = connection.collection(this.collectionName);
       const data = await db.updateOne(params, { $set: updateDocument });
-      if (data.modifiedCount >= 0) {
+      if (data.modifiedCount > 0) {
         const recordset = await this.findOne(params);
         return wrapper.data(recordset.data);
       }
-      return wrapper.data('Failed updating data');
+      return wrapper.error('Failed updating data');
     } catch (err) {
       logger.log(ctx, err.message, 'Error update data in mongodb');
       return wrapper.error(`Error Update Mongo ${err.message}`);

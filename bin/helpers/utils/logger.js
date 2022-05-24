@@ -1,31 +1,24 @@
 const winston = require('winston');
 const config = require('../../infra/configs/global_config');
-const WinstonLogStash = require('winston3-logstash-transport');
 
-let logger = new winston.createLogger({
-  transports: [
-    new winston.transports.Console({
-      level: 'debug',
-      colorize: true,
-      timestamp: function () {
-        return (new Date()).toLocaleTimeString();
-      },
-      prettyPrint: true
-    }),
-  ],
+let logger = winston.createLogger({
   exitOnError: false,
+  format: winston.format.combine(
+    winston.format.timestamp(),
+    winston.format.colorize(),
+    winston.format.simple()
+  ),
+  transports: [
+    new winston.transports.Console()
+  ]
 });
 
-// const a = () => {
-//   if (config.get('/logstash')) {
-//     logger.add(new WinstonLogStash(config.get('/logstash')));
-//   }
-// };
+if (config.get('/logstash/host')) {
+  const winstonLogstash = require('winston3-logstash-transport');
+  logger.add(new winstonLogstash(config.get('/logstash')));
+}
 
 const log = (context, message, scope) => {
-  if (config.get('/logstash')) {
-    logger.add(new WinstonLogStash(config.get('/logstash')));
-  }
   const obj = {
     context,
     scope,
@@ -35,9 +28,6 @@ const log = (context, message, scope) => {
 };
 
 const info = (context, message, scope, meta = undefined) => {
-  if (config.get('/logstash')) {
-    logger.add(new WinstonLogStash(config.get('/logstash')));
-  }
   const obj = {
     context,
     scope,
@@ -48,9 +38,6 @@ const info = (context, message, scope, meta = undefined) => {
 };
 
 const error = (context, message, scope, meta = undefined) => {
-  if (config.get('/logstash')) {
-    logger.add(new WinstonLogStash(config.get('/logstash')));
-  }
   const obj = {
     context,
     scope,
@@ -65,47 +52,3 @@ module.exports = {
   info,
   error,
 };
-
-
-
-
-// const winston = require('winston');
-// require('winston-logstash');
-// const config = require('../../infra/configs/global_config');
-
-// const logger = new winston.Logger({
-//   transports: [
-//     new winston.transports.Console({
-//       level: 'debug',
-//       handleExceptions: true,
-//       json: false,
-//       colorize: true
-//     }),
-//     new winston.transports.Logstash(config.get('/logstash'))
-//   ],
-//   exitOnError: false
-// });
-
-// const info = (context, message, scope) => {
-//   logger.info({ context, scope, message });
-// };
-
-// const warn = (context, message, scope) => {
-//   logger.warn({ context, scope, message });
-// };
-
-// const error = (context, message, scope) => {
-//   logger.error({ context, scope, message });
-// };
-
-// const log = (context, message, scope) => {
-//   logger.debug({ context, scope, message });
-// };
-
-
-// module.exports = {
-//   info,
-//   warn,
-//   error,
-//   log
-// };

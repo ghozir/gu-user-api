@@ -1,29 +1,29 @@
-// const hippie = require('hippie');
+const hippie = require('hippie');
 
-// const AppServer = require('../../bin/app/server');
+const AppServer = require('../../bin/app/server');
 
-// describe('Root', () => {
-//   let appServer;
+describe('Root', () => {
+  let appServer;
 
-//   beforeEach(function () {
-//     appServer = new AppServer();
-//     this.server = appServer.server;
-//   });
+  beforeEach(function () {
+    appServer = new AppServer();
+    this.server = appServer.server;
+  });
 
-//   afterEach(function () {
-//     this.server.close();
-//   });
+  afterEach(function () {
+    this.server.close();
+  });
 
-//   it('Should access root service', function (done) {
+  it('Should access root service', function (done) {
 
-//     hippie(this.server)
-//       .get('/')
-//       .expectStatus(200)
-//       .end((err, res, body) => {
-//         if(err){
-//           throw err;
-//         }
-//         done();
-//       });
-//   });
-// });
+    hippie(this.server)
+      .get('/')
+      .expectStatus(200)
+      .end((err, res, body) => {
+        if(err){
+          throw err;
+        }
+        done();
+      });
+  });
+});

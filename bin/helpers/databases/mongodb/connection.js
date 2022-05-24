@@ -37,7 +37,7 @@ const addConnectionPool = (cfg) => {
 };
 
 const createConnectionPool = async () => {
-  connectionPool.forEach(async (currentConnection, index) => {
+  connectionPool.map(async (currentConnection, index) => {
     const result = await createConnection(currentConnection.config);
     if (result.err) {
       connectionPool[index].db = currentConnection;
@@ -54,7 +54,7 @@ const init = (cfg) => {
 
 const ifExistConnection = async (config) => {
   let state = {};
-  connectionPool.forEach((currentConnection) => {
+  connectionPool.map((currentConnection) => {
     if (currentConnection.config === config) {
       state = currentConnection;
     }

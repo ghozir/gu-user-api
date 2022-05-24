@@ -15,20 +15,23 @@ const {
 } = require('../error');
 const { ERROR:httpError } = require('../http-status/status_code');
 
-const data = (data) => ({ err: null, data});
+const data = (data, meta) => ({ err: null, data, meta});
 
 const paginationData = (data, meta) => ({ err: null, data, meta});
 
-const error = (err, data) => ({ err, data });
+const error = (err) => ({ err, data: null });
 
 const response = (res, type, result, message = '', responseCode = 200) => {
   let status = true;
   let data = result.data;
+  let meta = result.meta || undefined;
   let code = responseCode;
+
   if (type === 'fail'){
     status = false;
-    data = result.data || null;
+    data = result.err.data || null;
     message = result.err.message || message;
+
     const errCode = checkErrorCode(result.err);
     code = result.err.code || errCode;
     responseCode = errCode;
@@ -45,6 +48,7 @@ const response = (res, type, result, message = '', responseCode = 200) => {
     success: status,
     data,
     message,
+    meta,
     code
   });
 };

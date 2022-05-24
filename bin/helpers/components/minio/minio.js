@@ -1,12 +1,12 @@
 const Minio = require('minio');
-const config = require('../../../infra/configs/global_config');
+// const config = require('../../../infra/configs/global_config');
 const wrapper = require('../../utils/wrapper');
 const logger = require('../../utils/logger');
 let minioClient;
 
-const init = () => {
+const init = (params) => {
   try {
-    minioClient = new Minio.Client(config.get('/minio'));
+    minioClient = new Minio.Client(params);
     logger.log('minio-init', 'minio initialized', 'info');
   } catch (error) {
     logger.log('minio-init', error, 'error');
@@ -57,9 +57,9 @@ const bufferObjectUpload = async(bucketName, objectName, buffer)=>{
   }
 };
 
-const objectUpload = async (bucketName, objectName, filePath) => {
+const objectUpload = async (bucketName, objectName, filePath, meta) => {
   try {
-    const isUploaded = await minioClient.fPutObject(bucketName, objectName, filePath);
+    const isUploaded = await minioClient.fPutObject(bucketName, objectName, filePath, meta);
     return wrapper.data(isUploaded);
   } catch (err) {
     logger.log('minioSdk-objectUpload', err.message, 'error upload object');

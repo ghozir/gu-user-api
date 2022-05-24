@@ -59,50 +59,6 @@ class Redis {
       });
   }
 
-  async mget(key) {
-    const result = new Promise((resolve, reject) => {
-      this.client.mget(key, (err, reply) => {
-        if (err) {
-          reject(err);
-        }
-        resolve(reply);
-      });
-    });
-    return Promise.resolve(result)
-      .then(res => {
-        if (!res) {
-          return wrapper.error(new NotFoundError('Key is not exist'));
-        }
-        return wrapper.data(serializer(res));
-      })
-      .catch(err => {
-        logger.log(this.ctx, err.message, 'get()');
-        return wrapper.error(new InternalServerError(err.message));
-      });
-  }
-
-  async getKey(key) {
-    const result = new Promise((resolve, reject) => {
-      this.client.keys(key, (err, reply) => {
-        if (err) {
-          reject(err);
-        }
-        resolve(reply);
-      });
-    });
-    return Promise.resolve(result)
-      .then(res => {
-        if (!res) {
-          return wrapper.error(new NotFoundError('Key is not exist'));
-        }
-        return wrapper.data(serializer(res));
-      })
-      .catch(err => {
-        logger.log(this.ctx, err.message, 'get()');
-        return wrapper.error(new InternalServerError(err.message));
-      });
-  }
-
   async set(key, value) {
     const result = new Promise((resolve, reject) => {
       this.client.set(key, stringify(value), (err, reply) => {

@@ -1,22 +1,21 @@
+
 const jwt = require('jsonwebtoken');
 const fs = require('fs');
 const config = require('../infra/configs/global_config');
-const userConsole = require('../modules/login/repositories/queries/query_handler');
+const queryUser = require('../modules/user/repositories/queries/query_handler');
 const wrapper = require('../helpers/utils/wrapper');
 const { ERROR } = require('../helpers/http-status/status_code');
 const { UnauthorizedError } = require('../helpers/error');
 
 const getKey = keyPath => fs.readFileSync(keyPath, 'utf8');
 
-const generateToken = async (payload, options = {}) => {
+const generateToken = async (payload) => {
   const privateKey = getKey(config.get('/privateKey'));
   const verifyOptions = {
     algorithm: 'RS256',
     audience: '97b33193-43ff-4e58-9124-b3a9b9f72c34',
     issuer: 'telkomdev',
-    expiresIn: '100m',
-    keyid: 'RS256',
-    ...options
+    expiresIn: '100m'
   };
   const token = jwt.sign(payload, privateKey, verifyOptions);
   return token;
@@ -51,7 +50,7 @@ const verifyToken = async (req, res, next) => {
   }
   let decodedToken;
   try {
-    decodedToken = jwt.verify(token, publicKey, verifyOptions);
+    decodedToken = await jwt.verify(token, publicKey, verifyOptions);
   } catch (error) {
     if (error instanceof jwt.TokenExpiredError) {
       result.err = new UnauthorizedError('Access token expired');
@@ -60,9 +59,8 @@ const verifyToken = async (req, res, next) => {
     result.err = new UnauthorizedError('Invalid token');
     return wrapper.response(res, 'fail', result, 'Invalid token', ERROR.UNAUTHORIZED);
   }
-
   const userId = decodedToken.sub;
-  const user = await userConsole.getCached(userId);
+  const user = await queryUser.getUser(userId);
   if (user.err) {
     result.err = new UnauthorizedError('Unauthorized');
     return wrapper.response(res, 'fail', result, 'Unauthorized', ERROR.UNAUTHORIZED);
