@@ -1,0 +1,793 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="0.1650" tests="244" failures="4">
+  <testsuite name="Root Suite" timestamp="2021-02-06T05:23:54" tests="0" time="0.0000" failures="0">
+  </testsuite>
+  <testsuite name="Auth Repository" timestamp="2021-02-06T05:23:54" tests="0" file="/home/alan/softnesia/Pijar2/authService/pijar-auth-api/test/unit/auth/auth_repository_test.js" time="0.0000" failures="0">
+  </testsuite>
+  <testsuite name="findByUsername" timestamp="2021-02-06T05:23:54" tests="1" file="/home/alan/softnesia/Pijar2/authService/pijar-auth-api/test/unit/auth/auth_repository_test.js" time="0.0000" failures="0">
+    <testcase name="Auth Repository findByUsername should error invalid password" time="0.0000" classname="should error invalid password">
+    </testcase>
+  </testsuite>
+  <testsuite name="Redis" timestamp="2021-02-06T05:23:54" tests="0" file="/home/alan/softnesia/Pijar2/authService/pijar-auth-api/test/unit/helpers/cache/redis/common_test.js" time="0.0000" failures="0">
+  </testsuite>
+  <testsuite name="class" timestamp="2021-02-06T05:23:54" tests="1" file="/home/alan/softnesia/Pijar2/authService/pijar-auth-api/test/unit/helpers/cache/redis/common_test.js" time="0.0010" failures="0">
+    <testcase name="Redis class should cover class" time="0.0010" classname="should cover class">
+    </testcase>
+  </testsuite>
+  <testsuite name="select" timestamp="2021-02-06T05:23:54" tests="3" file="/home/alan/softnesia/Pijar2/authService/pijar-auth-api/test/unit/helpers/cache/redis/common_test.js" time="0.0020" failures="0">
+    <testcase name="Redis select should cover when select failed" time="0.0010" classname="should cover when select failed">
+    </testcase>
+    <testcase name="Redis select should return undefined when select called" time="0.0000" classname="should return undefined when select called">
+    </testcase>
+    <testcase name="Redis select should return undefined when select called without index" time="0.0010" classname="should return undefined when select called without index">
+    </testcase>
+  </testsuite>
+  <testsuite name="get" timestamp="2021-02-06T05:23:54" tests="4" file="/home/alan/softnesia/Pijar2/authService/pijar-auth-api/test/unit/helpers/cache/redis/common_test.js" time="0.0040" failures="0">
+    <testcase name="Redis get should return wrapper error when get failed" time="0.0020" classname="should return wrapper error when get failed">
+    </testcase>
+    <testcase name="Redis get should return wrapper error when get returns null" time="0.0000" classname="should return wrapper error when get returns null">
+    </testcase>
+    <testcase name="Redis get should return wrapper data when get called" time="0.0010" classname="should return wrapper data when get called">
+    </testcase>
+    <testcase name="Redis get should return serialized wrapper data when get called and returns stringified object" time="0.0010" classname="should return serialized wrapper data when get called and returns stringified object">
+    </testcase>
+  </testsuite>
+  <testsuite name="set" timestamp="2021-02-06T05:23:54" tests="3" file="/home/alan/softnesia/Pijar2/authService/pijar-auth-api/test/unit/helpers/cache/redis/common_test.js" time="0.0020" failures="0">
+    <testcase name="Redis set should return wrapper error when set failed" time="0.0010" classname="should return wrapper error when set failed">
+    </testcase>
+    <testcase name="Redis set should return wrapper data when set called" time="0.0000" classname="should return wrapper data when set called">
+    </testcase>
+    <testcase name="Redis set should return stringified wrapper data when set called with object" time="0.0010" classname="should return stringified wrapper data when set called with object">
+    </testcase>
+  </testsuite>
+  <testsuite name="setex" timestamp="2021-02-06T05:23:54" tests="4" file="/home/alan/softnesia/Pijar2/authService/pijar-auth-api/test/unit/helpers/cache/redis/common_test.js" time="0.0020" failures="0">
+    <testcase name="Redis setex should return wrapper error when setex failed" time="0.0010" classname="should return wrapper error when setex failed">
+    </testcase>
+    <testcase name="Redis setex should return wrapper data when setex called" time="0.0000" classname="should return wrapper data when setex called">
+    </testcase>
+    <testcase name="Redis setex should return wrapper data when setex called without expireAt" time="0.0010" classname="should return wrapper data when setex called without expireAt">
+    </testcase>
+    <testcase name="Redis setex should return stringified wrapper data when setex called" time="0.0000" classname="should return stringified wrapper data when setex called">
+    </testcase>
+  </testsuite>
+  <testsuite name="ttl" timestamp="2021-02-06T05:23:54" tests="2" file="/home/alan/softnesia/Pijar2/authService/pijar-auth-api/test/unit/helpers/cache/redis/common_test.js" time="0.0020" failures="0">
+    <testcase name="Redis ttl should return wrapper error when ttl failed" time="0.0010" classname="should return wrapper error when ttl failed">
+    </testcase>
+    <testcase name="Redis ttl should return wrapper data when ttl called" time="0.0010" classname="should return wrapper data when ttl called">
+    </testcase>
+  </testsuite>
+  <testsuite name="del" timestamp="2021-02-06T05:23:54" tests="2" file="/home/alan/softnesia/Pijar2/authService/pijar-auth-api/test/unit/helpers/cache/redis/common_test.js" time="0.0020" failures="0">
+    <testcase name="Redis del should return wrapper error when del failed" time="0.0010" classname="should return wrapper error when del failed">
+    </testcase>
+    <testcase name="Redis del should return wrapper data when del called" time="0.0010" classname="should return wrapper data when del called">
+    </testcase>
+  </testsuite>
+  <testsuite name="Redis Connection" timestamp="2021-02-06T05:23:54" tests="3" file="/home/alan/softnesia/Pijar2/authService/pijar-auth-api/test/unit/helpers/cache/redis/connection_test.js" time="0.0020" failures="0">
+    <testcase name="Redis Connection should cover branch undefined client.host" time="0.0020" classname="should cover branch undefined client.host">
+    </testcase>
+    <testcase name="Redis Connection should cover branch defined client.host" time="0.0000" classname="should cover branch defined client.host">
+    </testcase>
+    <testcase name="Redis Connection should cover branch error connection" time="0.0000" classname="should cover branch error connection">
+    </testcase>
+  </testsuite>
+  <testsuite name="AWS SQS" timestamp="2021-02-06T05:23:54" tests="0" file="/home/alan/softnesia/Pijar2/authService/pijar-auth-api/test/unit/helpers/components/aws-sqs/sqs_test.js" time="0.0000" failures="0">
+  </testsuite>
+  <testsuite name="receiveQueue" timestamp="2021-02-06T05:23:54" tests="3" file="/home/alan/softnesia/Pijar2/authService/pijar-auth-api/test/unit/helpers/components/aws-sqs/sqs_test.js" time="0.0030" failures="0">
+    <testcase name="AWS SQS receiveQueue should return success" time="0.0010" classname="should return success">
+    </testcase>
+    <testcase name="AWS SQS receiveQueue should return error" time="0.0010" classname="should return error">
+    </testcase>
+    <testcase name="AWS SQS receiveQueue should return success" time="0.0010" classname="should return success">
+    </testcase>
+  </testsuite>
+  <testsuite name="removeQueue" timestamp="2021-02-06T05:23:54" tests="2" file="/home/alan/softnesia/Pijar2/authService/pijar-auth-api/test/unit/helpers/components/aws-sqs/sqs_test.js" time="0.0020" failures="0">
+    <testcase name="AWS SQS removeQueue should return success" time="0.0010" classname="should return success">
+    </testcase>
+    <testcase name="AWS SQS removeQueue should return error" time="0.0010" classname="should return error">
+    </testcase>
+  </testsuite>
+  <testsuite name="Axios HTTP" timestamp="2021-02-06T05:23:54" tests="0" file="/home/alan/softnesia/Pijar2/authService/pijar-auth-api/test/unit/helpers/components/axios/http_test.js" time="0.0000" failures="0">
+  </testsuite>
+  <testsuite name="constructor" timestamp="2021-02-06T05:23:54" tests="1" file="/home/alan/softnesia/Pijar2/authService/pijar-auth-api/test/unit/helpers/components/axios/http_test.js" time="0.0000" failures="0">
+    <testcase name="Axios HTTP constructor should cover class constructor" time="0.0000" classname="should cover class constructor">
+    </testcase>
+  </testsuite>
+  <testsuite name="baseUrl setter" timestamp="2021-02-06T05:23:54" tests="1" file="/home/alan/softnesia/Pijar2/authService/pijar-auth-api/test/unit/helpers/components/axios/http_test.js" time="0.0000" failures="0">
+    <testcase name="Axios HTTP baseUrl setter should set property correctly" time="0.0000" classname="should set property correctly">
+    </testcase>
+  </testsuite>
+  <testsuite name="basicAuth setter" timestamp="2021-02-06T05:23:54" tests="1" file="/home/alan/softnesia/Pijar2/authService/pijar-auth-api/test/unit/helpers/components/axios/http_test.js" time="0.0010" failures="0">
+    <testcase name="Axios HTTP basicAuth setter should set property correctly" time="0.0010" classname="should set property correctly">
+    </testcase>
+  </testsuite>
+  <testsuite name="get" timestamp="2021-02-06T05:23:54" tests="2" file="/home/alan/softnesia/Pijar2/authService/pijar-auth-api/test/unit/helpers/components/axios/http_test.js" time="0.0020" failures="0">
+    <testcase name="Axios HTTP get should cover positive case" time="0.0010" classname="should cover positive case">
+    </testcase>
+    <testcase name="Axios HTTP get should cover negative case" time="0.0010" classname="should cover negative case">
+    </testcase>
+  </testsuite>
+  <testsuite name="post" timestamp="2021-02-06T05:23:54" tests="2" file="/home/alan/softnesia/Pijar2/authService/pijar-auth-api/test/unit/helpers/components/axios/http_test.js" time="0.0020" failures="0">
+    <testcase name="Axios HTTP post should cover positive case" time="0.0010" classname="should cover positive case">
+    </testcase>
+    <testcase name="Axios HTTP post should cover negative case" time="0.0010" classname="should cover negative case">
+    </testcase>
+  </testsuite>
+  <testsuite name="formatError" timestamp="2021-02-06T05:23:54" tests="2" file="/home/alan/softnesia/Pijar2/authService/pijar-auth-api/test/unit/helpers/components/axios/http_test.js" time="0.0010" failures="0">
+    <testcase name="Axios HTTP formatError should cover default branch" time="0.0010" classname="should cover default branch">
+    </testcase>
+    <testcase name="Axios HTTP formatError should cover response error branch" time="0.0000" classname="should cover response error branch">
+    </testcase>
+  </testsuite>
+  <testsuite name="Azure Blob" timestamp="2021-02-06T05:23:54" tests="0" file="/home/alan/softnesia/Pijar2/authService/pijar-auth-api/test/unit/helpers/components/azure-blob/blob_test.js" time="0.0000" failures="0">
+  </testsuite>
+  <testsuite name="createBlob" timestamp="2021-02-06T05:23:54" tests="2" file="/home/alan/softnesia/Pijar2/authService/pijar-auth-api/test/unit/helpers/components/azure-blob/blob_test.js" time="0.0010" failures="0">
+    <testcase name="Azure Blob createBlob should return success" time="0.0010" classname="should return success">
+    </testcase>
+    <testcase name="Azure Blob createBlob should return error" time="0.0000" classname="should return error">
+    </testcase>
+  </testsuite>
+  <testsuite name="removeBlob" timestamp="2021-02-06T05:23:54" tests="2" file="/home/alan/softnesia/Pijar2/authService/pijar-auth-api/test/unit/helpers/components/azure-blob/blob_test.js" time="0.0020" failures="0">
+    <testcase name="Azure Blob removeBlob should return success" time="0.0010" classname="should return success">
+    </testcase>
+    <testcase name="Azure Blob removeBlob should return error" time="0.0010" classname="should return error">
+    </testcase>
+  </testsuite>
+  <testsuite name="Minio" timestamp="2021-02-06T05:23:54" tests="0" file="/home/alan/softnesia/Pijar2/authService/pijar-auth-api/test/unit/helpers/components/minio/minio_test.js" time="0.0000" failures="0">
+  </testsuite>
+  <testsuite name="init" timestamp="2021-02-06T05:23:54" tests="2" file="/home/alan/softnesia/Pijar2/authService/pijar-auth-api/test/unit/helpers/components/minio/minio_test.js" time="0.0000" failures="0">
+    <testcase name="Minio init should be cover success path" time="0.0000" classname="should be cover success path">
+    </testcase>
+    <testcase name="Minio init should be cover error path" time="0.0000" classname="should be cover error path">
+    </testcase>
+  </testsuite>
+  <testsuite name="isBucketExists" timestamp="2021-02-06T05:23:54" tests="2" file="/home/alan/softnesia/Pijar2/authService/pijar-auth-api/test/unit/helpers/components/minio/minio_test.js" time="0.0000" failures="0">
+    <testcase name="Minio isBucketExists should be cover success path" time="0.0000" classname="should be cover success path">
+    </testcase>
+    <testcase name="Minio isBucketExists should be cover error path" time="0.0000" classname="should be cover error path">
+    </testcase>
+  </testsuite>
+  <testsuite name="bucketCreate" timestamp="2021-02-06T05:23:54" tests="3" file="/home/alan/softnesia/Pijar2/authService/pijar-auth-api/test/unit/helpers/components/minio/minio_test.js" time="0.0030" failures="0">
+    <testcase name="Minio bucketCreate should be cover success path with bucket exists" time="0.0010" classname="should be cover success path with bucket exists">
+    </testcase>
+    <testcase name="Minio bucketCreate should be cover success path with bucket not exists" time="0.0010" classname="should be cover success path with bucket not exists">
+    </testcase>
+    <testcase name="Minio bucketCreate should be cover error path" time="0.0010" classname="should be cover error path">
+    </testcase>
+  </testsuite>
+  <testsuite name="bucketRemove" timestamp="2021-02-06T05:23:54" tests="2" file="/home/alan/softnesia/Pijar2/authService/pijar-auth-api/test/unit/helpers/components/minio/minio_test.js" time="0.0010" failures="0">
+    <testcase name="Minio bucketRemove should be cover success path" time="0.0010" classname="should be cover success path">
+    </testcase>
+    <testcase name="Minio bucketRemove should be cover error path" time="0.0000" classname="should be cover error path">
+    </testcase>
+  </testsuite>
+  <testsuite name="bufferObjectUpload" timestamp="2021-02-06T05:23:54" tests="2" file="/home/alan/softnesia/Pijar2/authService/pijar-auth-api/test/unit/helpers/components/minio/minio_test.js" time="0.0020" failures="0">
+    <testcase name="Minio bufferObjectUpload should be cover success path" time="0.0010" classname="should be cover success path">
+    </testcase>
+    <testcase name="Minio bufferObjectUpload should be cover error path" time="0.0010" classname="should be cover error path">
+    </testcase>
+  </testsuite>
+  <testsuite name="objectUpload" timestamp="2021-02-06T05:23:54" tests="2" file="/home/alan/softnesia/Pijar2/authService/pijar-auth-api/test/unit/helpers/components/minio/minio_test.js" time="0.0020" failures="0">
+    <testcase name="Minio objectUpload should be cover success path" time="0.0010" classname="should be cover success path">
+    </testcase>
+    <testcase name="Minio objectUpload should be cover error path" time="0.0010" classname="should be cover error path">
+    </testcase>
+  </testsuite>
+  <testsuite name="objectDownload" timestamp="2021-02-06T05:23:54" tests="2" file="/home/alan/softnesia/Pijar2/authService/pijar-auth-api/test/unit/helpers/components/minio/minio_test.js" time="0.0000" failures="0">
+    <testcase name="Minio objectDownload should be cover success path" time="0.0000" classname="should be cover success path">
+    </testcase>
+    <testcase name="Minio objectDownload should be cover error path" time="0.0000" classname="should be cover error path">
+    </testcase>
+  </testsuite>
+  <testsuite name="objectRemove" timestamp="2021-02-06T05:23:54" tests="2" file="/home/alan/softnesia/Pijar2/authService/pijar-auth-api/test/unit/helpers/components/minio/minio_test.js" time="0.0000" failures="0">
+    <testcase name="Minio objectRemove should be cover success path" time="0.0000" classname="should be cover success path">
+    </testcase>
+    <testcase name="Minio objectRemove should be cover error path" time="0.0000" classname="should be cover error path">
+    </testcase>
+  </testsuite>
+  <testsuite name="objectGetUrl" timestamp="2021-02-06T05:23:54" tests="2" file="/home/alan/softnesia/Pijar2/authService/pijar-auth-api/test/unit/helpers/components/minio/minio_test.js" time="0.0010" failures="0">
+    <testcase name="Minio objectGetUrl should be cover success path" time="0.0010" classname="should be cover success path">
+    </testcase>
+    <testcase name="Minio objectGetUrl should be cover error path" time="0.0000" classname="should be cover error path">
+    </testcase>
+  </testsuite>
+  <testsuite name="listObjects" timestamp="2021-02-06T05:23:54" tests="2" file="/home/alan/softnesia/Pijar2/authService/pijar-auth-api/test/unit/helpers/components/minio/minio_test.js" time="0.0010" failures="0">
+    <testcase name="Minio listObjects should be cover success path" time="0.0010" classname="should be cover success path">
+    </testcase>
+    <testcase name="Minio listObjects should be cover error path" time="0.0000" classname="should be cover error path">
+    </testcase>
+  </testsuite>
+  <testsuite name="Sentry" timestamp="2021-02-06T05:23:54" tests="0" file="/home/alan/softnesia/Pijar2/authService/pijar-auth-api/test/unit/helpers/components/sentry/sentry_log_test.js" time="0.0000" failures="0">
+  </testsuite>
+  <testsuite name="sendError" timestamp="2021-02-06T05:23:54" tests="1" file="/home/alan/softnesia/Pijar2/authService/pijar-auth-api/test/unit/helpers/components/sentry/sentry_log_test.js" time="0.0010" failures="0">
+    <testcase name="Sentry sendError should success send error" time="0.0010" classname="should success send error">
+    </testcase>
+  </testsuite>
+  <testsuite name="Elastic Connection" timestamp="2021-02-06T05:23:55" tests="4" file="/home/alan/softnesia/Pijar2/authService/pijar-auth-api/test/unit/helpers/databases/elasticsearch/connection_test.js" time="0.0010" failures="0">
+    <testcase name="Elastic Connection should create connection" time="0.0010" classname="should create connection">
+    </testcase>
+    <testcase name="Elastic Connection should cover branch condition create connection" time="0.0000" classname="should cover branch condition create connection">
+    </testcase>
+    <testcase name="Elastic Connection should get connection" time="0.0000" classname="should get connection">
+    </testcase>
+    <testcase name="Elastic Connection should cover branch condition get connection" time="0.0000" classname="should cover branch condition get connection">
+    </testcase>
+  </testsuite>
+  <testsuite name="Elastic DB" timestamp="2021-02-06T05:23:55" tests="0" file="/home/alan/softnesia/Pijar2/authService/pijar-auth-api/test/unit/helpers/databases/elasticsearch/db_test.js" time="0.0000" failures="0">
+  </testsuite>
+  <testsuite name="createIndex" timestamp="2021-02-06T05:23:55" tests="2" file="/home/alan/softnesia/Pijar2/authService/pijar-auth-api/test/unit/helpers/databases/elasticsearch/db_test.js" time="0.0030" failures="0">
+    <testcase name="Elastic DB createIndex should return wrapper error" time="0.0030" classname="should return wrapper error">
+    </testcase>
+    <testcase name="Elastic DB createIndex should return wrapper success" time="0.0000" classname="should return wrapper success">
+    </testcase>
+  </testsuite>
+  <testsuite name="getAllIndex" timestamp="2021-02-06T05:23:55" tests="2" file="/home/alan/softnesia/Pijar2/authService/pijar-auth-api/test/unit/helpers/databases/elasticsearch/db_test.js" time="0.0020" failures="0">
+    <testcase name="Elastic DB getAllIndex should return wrapper error" time="0.0010" classname="should return wrapper error">
+    </testcase>
+    <testcase name="Elastic DB getAllIndex should return wrapper success" time="0.0010" classname="should return wrapper success">
+    </testcase>
+  </testsuite>
+  <testsuite name="insertData" timestamp="2021-02-06T05:23:55" tests="2" file="/home/alan/softnesia/Pijar2/authService/pijar-auth-api/test/unit/helpers/databases/elasticsearch/db_test.js" time="0.0020" failures="0">
+    <testcase name="Elastic DB insertData should return wrapper error" time="0.0010" classname="should return wrapper error">
+    </testcase>
+    <testcase name="Elastic DB insertData should return wrapper success" time="0.0010" classname="should return wrapper success">
+    </testcase>
+  </testsuite>
+  <testsuite name="countData" timestamp="2021-02-06T05:23:55" tests="2" file="/home/alan/softnesia/Pijar2/authService/pijar-auth-api/test/unit/helpers/databases/elasticsearch/db_test.js" time="0.0020" failures="0">
+    <testcase name="Elastic DB countData should return wrapper error" time="0.0010" classname="should return wrapper error">
+    </testcase>
+    <testcase name="Elastic DB countData should return wrapper success" time="0.0010" classname="should return wrapper success">
+    </testcase>
+  </testsuite>
+  <testsuite name="deleteData" timestamp="2021-02-06T05:23:55" tests="2" file="/home/alan/softnesia/Pijar2/authService/pijar-auth-api/test/unit/helpers/databases/elasticsearch/db_test.js" time="0.0020" failures="0">
+    <testcase name="Elastic DB deleteData should return wrapper error" time="0.0010" classname="should return wrapper error">
+    </testcase>
+    <testcase name="Elastic DB deleteData should return wrapper success" time="0.0010" classname="should return wrapper success">
+    </testcase>
+  </testsuite>
+  <testsuite name="updateData" timestamp="2021-02-06T05:23:55" tests="2" file="/home/alan/softnesia/Pijar2/authService/pijar-auth-api/test/unit/helpers/databases/elasticsearch/db_test.js" time="0.0020" failures="0">
+    <testcase name="Elastic DB updateData should return wrapper error" time="0.0010" classname="should return wrapper error">
+    </testcase>
+    <testcase name="Elastic DB updateData should return wrapper success" time="0.0010" classname="should return wrapper success">
+    </testcase>
+  </testsuite>
+  <testsuite name="clearScroll" timestamp="2021-02-06T05:23:55" tests="2" file="/home/alan/softnesia/Pijar2/authService/pijar-auth-api/test/unit/helpers/databases/elasticsearch/db_test.js" time="0.0010" failures="0">
+    <testcase name="Elastic DB clearScroll should return wrapper error" time="0.0010" classname="should return wrapper error">
+    </testcase>
+    <testcase name="Elastic DB clearScroll should return wrapper success" time="0.0000" classname="should return wrapper success">
+    </testcase>
+  </testsuite>
+  <testsuite name="sugesters" timestamp="2021-02-06T05:23:55" tests="2" file="/home/alan/softnesia/Pijar2/authService/pijar-auth-api/test/unit/helpers/databases/elasticsearch/db_test.js" time="0.0020" failures="0">
+    <testcase name="Elastic DB sugesters should return wrapper error" time="0.0010" classname="should return wrapper error">
+    </testcase>
+    <testcase name="Elastic DB sugesters should return wrapper success" time="0.0010" classname="should return wrapper success">
+    </testcase>
+  </testsuite>
+  <testsuite name="findAll" timestamp="2021-02-06T05:23:55" tests="3" file="/home/alan/softnesia/Pijar2/authService/pijar-auth-api/test/unit/helpers/databases/elasticsearch/db_test.js" time="0.0030" failures="0">
+    <testcase name="Elastic DB findAll should return wrapper error" time="0.0010" classname="should return wrapper error">
+    </testcase>
+    <testcase name="Elastic DB findAll should return wrapper success" time="0.0010" classname="should return wrapper success">
+    </testcase>
+    <testcase name="Elastic DB findAll should return empty data" time="0.0010" classname="should return empty data">
+    </testcase>
+  </testsuite>
+  <testsuite name="findOne" timestamp="2021-02-06T05:23:55" tests="3" file="/home/alan/softnesia/Pijar2/authService/pijar-auth-api/test/unit/helpers/databases/elasticsearch/db_test.js" time="0.0020" failures="0">
+    <testcase name="Elastic DB findOne should return wrapper error" time="0.0000" classname="should return wrapper error">
+    </testcase>
+    <testcase name="Elastic DB findOne should return wrapper success" time="0.0010" classname="should return wrapper success">
+    </testcase>
+    <testcase name="Elastic DB findOne should return empty data" time="0.0010" classname="should return empty data">
+    </testcase>
+  </testsuite>
+  <testsuite name="insertMany" timestamp="2021-02-06T05:23:55" tests="2" file="/home/alan/softnesia/Pijar2/authService/pijar-auth-api/test/unit/helpers/databases/elasticsearch/db_test.js" time="0.0020" failures="0">
+    <testcase name="Elastic DB insertMany should return wrapper error" time="0.0010" classname="should return wrapper error">
+    </testcase>
+    <testcase name="Elastic DB insertMany should return wrapper success" time="0.0010" classname="should return wrapper success">
+    </testcase>
+  </testsuite>
+  <testsuite name="Mongo Connection" timestamp="2021-02-06T05:23:55" tests="5" file="/home/alan/softnesia/Pijar2/authService/pijar-auth-api/test/unit/helpers/databases/mongodb/connection_test.js" time="0.0040" failures="0">
+    <testcase name="Mongo Connection should cover branch condition isConnected" time="0.0010" classname="should cover branch condition isConnected">
+    </testcase>
+    <testcase name="Mongo Connection should cover create mongo connection failed" time="0.0010" classname="should cover create mongo connection failed">
+    </testcase>
+    <testcase name="Mongo Connection should create connection" time="0.0000" classname="should create connection">
+    </testcase>
+    <testcase name="Mongo Connection should cover unavailable connection config" time="0.0000" classname="should cover unavailable connection config">
+    </testcase>
+    <testcase name="Mongo Connection should get connection if exist" time="0.0020" classname="should get connection if exist">
+    </testcase>
+  </testsuite>
+  <testsuite name="Mongodb" timestamp="2021-02-06T05:23:55" tests="0" file="/home/alan/softnesia/Pijar2/authService/pijar-auth-api/test/unit/helpers/databases/mongodb/db_test.js" time="0.0000" failures="0">
+  </testsuite>
+  <testsuite name="class" timestamp="2021-02-06T05:23:55" tests="1" file="/home/alan/softnesia/Pijar2/authService/pijar-auth-api/test/unit/helpers/databases/mongodb/db_test.js" time="0.0000" failures="0">
+    <testcase name="Mongodb class should cover class" time="0.0000" classname="should cover class">
+    </testcase>
+  </testsuite>
+  <testsuite name="findOne" timestamp="2021-02-06T05:23:55" tests="4" file="/home/alan/softnesia/Pijar2/authService/pijar-auth-api/test/unit/helpers/databases/mongodb/db_test.js" time="0.0030" failures="0">
+    <testcase name="Mongodb findOne should return wrapper error when get connection error" time="0.0010" classname="should return wrapper error when get connection error">
+    </testcase>
+    <testcase name="Mongodb findOne should return wrapper error when db function is error" time="0.0010" classname="should return wrapper error when db function is error">
+    </testcase>
+    <testcase name="Mongodb findOne should return empty wrapper data when findOne success with no data found" time="0.0010" classname="should return empty wrapper data when findOne success with no data found">
+    </testcase>
+    <testcase name="Mongodb findOne should return wrapper data when findOne success" time="0.0000" classname="should return wrapper data when findOne success">
+    </testcase>
+  </testsuite>
+  <testsuite name="findMany" timestamp="2021-02-06T05:23:55" tests="4" file="/home/alan/softnesia/Pijar2/authService/pijar-auth-api/test/unit/helpers/databases/mongodb/db_test.js" time="0.0020" failures="0">
+    <testcase name="Mongodb findMany should return wrapper error when get connection error" time="0.0000" classname="should return wrapper error when get connection error">
+    </testcase>
+    <testcase name="Mongodb findMany should return wrapper error when db function is error" time="0.0010" classname="should return wrapper error when db function is error">
+    </testcase>
+    <testcase name="Mongodb findMany should return empty wrapper data when findMany success with no data found" time="0.0010" classname="should return empty wrapper data when findMany success with no data found">
+    </testcase>
+    <testcase name="Mongodb findMany should return wrapper data when findMany success" time="0.0000" classname="should return wrapper data when findMany success">
+    </testcase>
+  </testsuite>
+  <testsuite name="findPaginated" timestamp="2021-02-06T05:23:55" tests="4" file="/home/alan/softnesia/Pijar2/authService/pijar-auth-api/test/unit/helpers/databases/mongodb/db_test.js" time="0.0030" failures="0">
+    <testcase name="Mongodb findPaginated should return wrapper error when get connection error" time="0.0000" classname="should return wrapper error when get connection error">
+    </testcase>
+    <testcase name="Mongodb findPaginated should return wrapper error when db function is error" time="0.0010" classname="should return wrapper error when db function is error">
+    </testcase>
+    <testcase name="Mongodb findPaginated should return wrapper data when findPaginated success with no data found" time="0.0010" classname="should return wrapper data when findPaginated success with no data found">
+    </testcase>
+    <testcase name="Mongodb findPaginated should return wrapper data when findPaginated success" time="0.0010" classname="should return wrapper data when findPaginated success">
+    </testcase>
+  </testsuite>
+  <testsuite name="insertOne" timestamp="2021-02-06T05:23:55" tests="4" file="/home/alan/softnesia/Pijar2/authService/pijar-auth-api/test/unit/helpers/databases/mongodb/db_test.js" time="0.0020" failures="0">
+    <testcase name="Mongodb insertOne should return wrapper error when get connection error" time="0.0000" classname="should return wrapper error when get connection error">
+    </testcase>
+    <testcase name="Mongodb insertOne should return wrapper error when db function is error" time="0.0010" classname="should return wrapper error when db function is error">
+    </testcase>
+    <testcase name="Mongodb insertOne should return wrapper data when insertOne not success" time="0.0010" classname="should return wrapper data when insertOne not success">
+    </testcase>
+    <testcase name="Mongodb insertOne should return wrapper data when insertOne success" time="0.0000" classname="should return wrapper data when insertOne success">
+    </testcase>
+  </testsuite>
+  <testsuite name="insertMany" timestamp="2021-02-06T05:23:55" tests="4" file="/home/alan/softnesia/Pijar2/authService/pijar-auth-api/test/unit/helpers/databases/mongodb/db_test.js" time="0.0030" failures="0">
+    <testcase name="Mongodb insertMany should return wrapper error when get connection error" time="0.0000" classname="should return wrapper error when get connection error">
+    </testcase>
+    <testcase name="Mongodb insertMany should return wrapper error when db function is error" time="0.0010" classname="should return wrapper error when db function is error">
+    </testcase>
+    <testcase name="Mongodb insertMany should return wrapper data when insertMany not success" time="0.0010" classname="should return wrapper data when insertMany not success">
+    </testcase>
+    <testcase name="Mongodb insertMany should return wrapper data when insertMany success" time="0.0010" classname="should return wrapper data when insertMany success">
+    </testcase>
+  </testsuite>
+  <testsuite name="updateOne" timestamp="2021-02-06T05:23:55" tests="4" file="/home/alan/softnesia/Pijar2/authService/pijar-auth-api/test/unit/helpers/databases/mongodb/db_test.js" time="0.0040" failures="0">
+    <testcase name="Mongodb updateOne should return wrapper error when get connection error" time="0.0010" classname="should return wrapper error when get connection error">
+    </testcase>
+    <testcase name="Mongodb updateOne should return wrapper error when db function is error" time="0.0010" classname="should return wrapper error when db function is error">
+    </testcase>
+    <testcase name="Mongodb updateOne should return wrapper data when update failed" time="0.0010" classname="should return wrapper data when update failed">
+    </testcase>
+    <testcase name="Mongodb updateOne should return wrapper data when updateOne success" time="0.0010" classname="should return wrapper data when updateOne success">
+    </testcase>
+  </testsuite>
+  <testsuite name="upsertOne" timestamp="2021-02-06T05:23:55" tests="4" file="/home/alan/softnesia/Pijar2/authService/pijar-auth-api/test/unit/helpers/databases/mongodb/db_test.js" time="0.0030" failures="0">
+    <testcase name="Mongodb upsertOne should return wrapper error when get connection error" time="0.0010" classname="should return wrapper error when get connection error">
+    </testcase>
+    <testcase name="Mongodb upsertOne should return wrapper error when db function is error" time="0.0010" classname="should return wrapper error when db function is error">
+    </testcase>
+    <testcase name="Mongodb upsertOne should return wrapper data when upsert failed" time="0.0000" classname="should return wrapper data when upsert failed">
+    </testcase>
+    <testcase name="Mongodb upsertOne should return wrapper data when upsertOne success" time="0.0010" classname="should return wrapper data when upsertOne success">
+    </testcase>
+  </testsuite>
+  <testsuite name="deleteOne" timestamp="2021-02-06T05:23:55" tests="4" file="/home/alan/softnesia/Pijar2/authService/pijar-auth-api/test/unit/helpers/databases/mongodb/db_test.js" time="0.0040" failures="0">
+    <testcase name="Mongodb deleteOne should return wrapper error when get connection error" time="0.0010" classname="should return wrapper error when get connection error">
+    </testcase>
+    <testcase name="Mongodb deleteOne should return wrapper error when db function is error" time="0.0010" classname="should return wrapper error when db function is error">
+    </testcase>
+    <testcase name="Mongodb deleteOne should return wrapper data when delete failed" time="0.0010" classname="should return wrapper data when delete failed">
+    </testcase>
+    <testcase name="Mongodb deleteOne should return wrapper data when deleteOne success" time="0.0010" classname="should return wrapper data when deleteOne success">
+    </testcase>
+  </testsuite>
+  <testsuite name="countAll" timestamp="2021-02-06T05:23:55" tests="4" file="/home/alan/softnesia/Pijar2/authService/pijar-auth-api/test/unit/helpers/databases/mongodb/db_test.js" time="0.0020" failures="0">
+    <testcase name="Mongodb countAll should return wrapper error when get connection error" time="0.0000" classname="should return wrapper error when get connection error">
+    </testcase>
+    <testcase name="Mongodb countAll should return wrapper error when db function is error" time="0.0010" classname="should return wrapper error when db function is error">
+    </testcase>
+    <testcase name="Mongodb countAll should return wrapper data when countAll success with no data found" time="0.0010" classname="should return wrapper data when countAll success with no data found">
+    </testcase>
+    <testcase name="Mongodb countAll should return wrapper data when countAll success" time="0.0000" classname="should return wrapper data when countAll success">
+    </testcase>
+  </testsuite>
+  <testsuite name="Mysql Connection" timestamp="2021-02-06T05:23:55" tests="3" file="/home/alan/softnesia/Pijar2/authService/pijar-auth-api/test/unit/helpers/databases/mysql/connection_test.js" time="0.0000" failures="0">
+    <testcase name="Mysql Connection should create connection" time="0.0000" classname="should create connection">
+    </testcase>
+    <testcase name="Mysql Connection should cover branch condition create connection" time="0.0000" classname="should cover branch condition create connection">
+    </testcase>
+    <testcase name="Mysql Connection should get connection" time="0.0000" classname="should get connection">
+    </testcase>
+  </testsuite>
+  <testsuite name="Mysql DB" timestamp="2021-02-06T05:23:55" tests="6" file="/home/alan/softnesia/Pijar2/authService/pijar-auth-api/test/unit/helpers/databases/mysql/db_test.js" time="0.0040" failures="0">
+    <testcase name="Mysql DB expect query to be resolved" time="0.0010" classname="expect query to be resolved">
+    </testcase>
+    <testcase name="Mysql DB should create a new conn" time="0.0000" classname="should create a new conn">
+    </testcase>
+    <testcase name="Mysql DB expect query to be error" time="0.0010" classname="expect query to be error">
+    </testcase>
+    <testcase name="Mysql DB should cover the error branches on getting connection conn lost" time="0.0010" classname="should cover the error branches on getting connection conn lost">
+    </testcase>
+    <testcase name="Mysql DB should cover the error branches on getting connection count err" time="0.0010" classname="should cover the error branches on getting connection count err">
+    </testcase>
+    <testcase name="Mysql DB should cover the error branches on getting connection refused" time="0.0000" classname="should cover the error branches on getting connection refused">
+    </testcase>
+  </testsuite>
+  <testsuite name="Postgre Connection" timestamp="2021-02-06T05:23:55" tests="0" file="/home/alan/softnesia/Pijar2/authService/pijar-auth-api/test/unit/helpers/databases/postgresql/connection_test.js" time="0.0000" failures="0">
+  </testsuite>
+  <testsuite name="createConnectionPool" timestamp="2021-02-06T05:23:55" tests="2" file="/home/alan/softnesia/Pijar2/authService/pijar-auth-api/test/unit/helpers/databases/postgresql/connection_test.js" time="0.0010" failures="0">
+    <testcase name="Postgre Connection createConnectionPool should create postgre pool connection" time="0.0000" classname="should create postgre pool connection">
+    </testcase>
+    <testcase name="Postgre Connection createConnectionPool should cover branch condition create postgre pool connection" time="0.0010" classname="should cover branch condition create postgre pool connection">
+    </testcase>
+  </testsuite>
+  <testsuite name="getConnection" timestamp="2021-02-06T05:23:55" tests="1" file="/home/alan/softnesia/Pijar2/authService/pijar-auth-api/test/unit/helpers/databases/postgresql/connection_test.js" time="0.0000" failures="0">
+    <testcase name="Postgre Connection getConnection should get connection" time="0.0000" classname="should get connection">
+    </testcase>
+  </testsuite>
+  <testsuite name="Postgre DB" timestamp="2021-02-06T05:23:55" tests="0" file="/home/alan/softnesia/Pijar2/authService/pijar-auth-api/test/unit/helpers/databases/postgresql/db_test.js" time="0.0000" failures="0">
+  </testsuite>
+  <testsuite name="query" timestamp="2021-02-06T05:23:55" tests="3" file="/home/alan/softnesia/Pijar2/authService/pijar-auth-api/test/unit/helpers/databases/postgresql/db_test.js" time="0.0020" failures="0">
+    <testcase name="Postgre DB query should return success" time="0.0010" classname="should return success">
+    </testcase>
+    <testcase name="Postgre DB query should create new connection" time="0.0000" classname="should create new connection">
+    </testcase>
+    <testcase name="Postgre DB query should return error" time="0.0010" classname="should return error">
+    </testcase>
+  </testsuite>
+  <testsuite name="command" timestamp="2021-02-06T05:23:55" tests="3" file="/home/alan/softnesia/Pijar2/authService/pijar-auth-api/test/unit/helpers/databases/postgresql/db_test.js" time="0.0020" failures="0">
+    <testcase name="Postgre DB command should return success" time="0.0010" classname="should return success">
+    </testcase>
+    <testcase name="Postgre DB command should create new connection" time="0.0010" classname="should create new connection">
+    </testcase>
+    <testcase name="Postgre DB command should return error" time="0.0000" classname="should return error">
+    </testcase>
+  </testsuite>
+  <testsuite name="Common" timestamp="2021-02-06T05:23:55" tests="0" file="/home/alan/softnesia/Pijar2/authService/pijar-auth-api/test/unit/helpers/utils/common_test.js" time="0.0000" failures="0">
+  </testsuite>
+  <testsuite name="getLastFromURL" timestamp="2021-02-06T05:23:55" tests="1" file="/home/alan/softnesia/Pijar2/authService/pijar-auth-api/test/unit/helpers/utils/common_test.js" time="0.0000" failures="0">
+    <testcase name="Common getLastFromURL should return succes" time="0.0000" classname="should return succes">
+    </testcase>
+  </testsuite>
+  <testsuite name="Logger" timestamp="2021-02-06T05:23:55" tests="0" file="/home/alan/softnesia/Pijar2/authService/pijar-auth-api/test/unit/helpers/utils/logger_test.js" time="0.0000" failures="0">
+  </testsuite>
+  <testsuite name="log" timestamp="2021-02-06T05:23:55" tests="3" file="/home/alan/softnesia/Pijar2/authService/pijar-auth-api/test/unit/helpers/utils/logger_test.js" time="0.0010" failures="0">
+    <testcase name="Logger log should send log" time="0.0000" classname="should send log">
+    </testcase>
+    <testcase name="Logger log should send info log" time="0.0010" classname="should send info log">
+    </testcase>
+    <testcase name="Logger log should send error log" time="0.0000" classname="should send error log">
+    </testcase>
+  </testsuite>
+  <testsuite name="Wrapper" timestamp="2021-02-06T05:23:55" tests="0" file="/home/alan/softnesia/Pijar2/authService/pijar-auth-api/test/unit/helpers/utils/wrapper_test.js" time="0.0000" failures="0">
+  </testsuite>
+  <testsuite name="paginationData" timestamp="2021-02-06T05:23:55" tests="1" file="/home/alan/softnesia/Pijar2/authService/pijar-auth-api/test/unit/helpers/utils/wrapper_test.js" time="0.0000" failures="0">
+    <testcase name="Wrapper paginationData should success" time="0.0000" classname="should success">
+    </testcase>
+  </testsuite>
+  <testsuite name="paginationResponse" timestamp="2021-02-06T05:23:55" tests="3" file="/home/alan/softnesia/Pijar2/authService/pijar-auth-api/test/unit/helpers/utils/wrapper_test.js" time="0.0000" failures="0">
+    <testcase name="Wrapper paginationResponse should success" time="0.0000" classname="should success">
+    </testcase>
+    <testcase name="Wrapper paginationResponse should error" time="0.0000" classname="should error">
+    </testcase>
+    <testcase name="Wrapper paginationResponse should cover branch" time="0.0000" classname="should cover branch">
+    </testcase>
+  </testsuite>
+  <testsuite name="response" timestamp="2021-02-06T05:23:55" tests="1" file="/home/alan/softnesia/Pijar2/authService/pijar-auth-api/test/unit/helpers/utils/wrapper_test.js" time="0.0000" failures="0">
+    <testcase name="Wrapper response should cover branch" time="0.0000" classname="should cover branch">
+    </testcase>
+  </testsuite>
+  <testsuite name="checkErrorCode" timestamp="2021-02-06T05:23:55" tests="13" file="/home/alan/softnesia/Pijar2/authService/pijar-auth-api/test/unit/helpers/utils/wrapper_test.js" time="0.0020" failures="0">
+    <testcase name="Wrapper checkErrorCode should return NotFoundError" time="0.0000" classname="should return NotFoundError">
+    </testcase>
+    <testcase name="Wrapper checkErrorCode should return BadRequestError" time="0.0000" classname="should return BadRequestError">
+    </testcase>
+    <testcase name="Wrapper checkErrorCode should return InternalServerError" time="0.0000" classname="should return InternalServerError">
+    </testcase>
+    <testcase name="Wrapper checkErrorCode should return ConflictError" time="0.0010" classname="should return ConflictError">
+    </testcase>
+    <testcase name="Wrapper checkErrorCode should return ExpectationFailedError" time="0.0000" classname="should return ExpectationFailedError">
+    </testcase>
+    <testcase name="Wrapper checkErrorCode should return GatewayTimeoutError" time="0.0000" classname="should return GatewayTimeoutError">
+    </testcase>
+    <testcase name="Wrapper checkErrorCode should return UnauthorizedError" time="0.0000" classname="should return UnauthorizedError">
+    </testcase>
+    <testcase name="Wrapper checkErrorCode should return ServiceUnavailableError" time="0.0010" classname="should return ServiceUnavailableError">
+    </testcase>
+    <testcase name="Wrapper checkErrorCode should return ForbiddenError" time="0.0000" classname="should return ForbiddenError">
+    </testcase>
+    <testcase name="Wrapper checkErrorCode should return UnprocessableEntityError" time="0.0000" classname="should return UnprocessableEntityError">
+    </testcase>
+    <testcase name="Wrapper checkErrorCode should return PayloadTooLargeError" time="0.0000" classname="should return PayloadTooLargeError">
+    </testcase>
+    <testcase name="Wrapper checkErrorCode should return UnsupportedMediaTypeError" time="0.0000" classname="should return UnsupportedMediaTypeError">
+    </testcase>
+    <testcase name="Wrapper checkErrorCode should return TooManyRequestsError" time="0.0000" classname="should return TooManyRequestsError">
+    </testcase>
+  </testsuite>
+  <testsuite name="Meta API Handler" timestamp="2021-02-06T05:23:55" tests="0" file="/home/alan/softnesia/Pijar2/authService/pijar-auth-api/test/unit/modules/auth-student/handlers/api_handler_test.js" time="0.0000" failures="0">
+  </testsuite>
+  <testsuite name="postDataLogin" timestamp="2021-02-06T05:23:55" tests="2" file="/home/alan/softnesia/Pijar2/authService/pijar-auth-api/test/unit/modules/auth-student/handlers/api_handler_test.js" time="0.0040" failures="0">
+    <testcase name="Meta API Handler postDataLogin should cover error validation" time="0.0030" classname="should cover error validation">
+    </testcase>
+    <testcase name="Meta API Handler postDataLogin should cover success " time="0.0010" classname="should cover success ">
+    </testcase>
+  </testsuite>
+  <testsuite name="googleRegister" timestamp="2021-02-06T05:23:55" tests="2" file="/home/alan/softnesia/Pijar2/authService/pijar-auth-api/test/unit/modules/auth-student/handlers/api_handler_test.js" time="0.0020" failures="0">
+    <testcase name="Meta API Handler googleRegister should cover error validation" time="0.0010" classname="should cover error validation">
+    </testcase>
+    <testcase name="Meta API Handler googleRegister should cover success" time="0.0010" classname="should cover success">
+    </testcase>
+  </testsuite>
+  <testsuite name="checkEmailGoogle" timestamp="2021-02-06T05:23:55" tests="2" file="/home/alan/softnesia/Pijar2/authService/pijar-auth-api/test/unit/modules/auth-student/handlers/api_handler_test.js" time="0.0010" failures="0">
+    <testcase name="Meta API Handler checkEmailGoogle should cover error validation" time="0.0010" classname="should cover error validation">
+    </testcase>
+    <testcase name="Meta API Handler checkEmailGoogle should cover success" time="0.0000" classname="should cover success">
+    </testcase>
+  </testsuite>
+  <testsuite name="getMetaData" timestamp="2021-02-06T05:23:55" tests="2" file="/home/alan/softnesia/Pijar2/authService/pijar-auth-api/test/unit/modules/auth-student/handlers/api_handler_test.js" time="0.0010" failures="0">
+    <testcase name="Meta API Handler getMetaData should cover error validation" time="0.0010" classname="should cover error validation">
+    </testcase>
+    <testcase name="Meta API Handler getMetaData should cover success" time="0.0000" classname="should cover success">
+    </testcase>
+  </testsuite>
+  <testsuite name="removeMetaData" timestamp="2021-02-06T05:23:55" tests="2" file="/home/alan/softnesia/Pijar2/authService/pijar-auth-api/test/unit/modules/auth-student/handlers/api_handler_test.js" time="0.0020" failures="0">
+    <testcase name="Meta API Handler removeMetaData should cover error validation" time="0.0010" classname="should cover error validation">
+    </testcase>
+    <testcase name="Meta API Handler removeMetaData should cover success" time="0.0010" classname="should cover success">
+    </testcase>
+  </testsuite>
+  <testsuite name="auth-student-commandHandler" timestamp="2021-02-06T05:23:55" tests="0" file="/home/alan/softnesia/Pijar2/authService/pijar-auth-api/test/unit/modules/auth-student/repositories/commands/command_handler_test.js" time="0.0000" failures="0">
+  </testsuite>
+  <testsuite name="googleRegister" timestamp="2021-02-06T05:23:55" tests="1" file="/home/alan/softnesia/Pijar2/authService/pijar-auth-api/test/unit/modules/auth-student/repositories/commands/command_handler_test.js" time="0.0010" failures="0">
+    <testcase name="auth-student-commandHandler googleRegister should return googleRegister" time="0.0010" classname="should return googleRegister">
+    </testcase>
+  </testsuite>
+  <testsuite name="postLogin" timestamp="2021-02-06T05:23:55" tests="1" file="/home/alan/softnesia/Pijar2/authService/pijar-auth-api/test/unit/modules/auth-student/repositories/commands/command_handler_test.js" time="0.0010" failures="0">
+    <testcase name="auth-student-commandHandler postLogin should return postLogin" time="0.0010" classname="should return postLogin">
+    </testcase>
+  </testsuite>
+  <testsuite name="removeMetaData" timestamp="2021-02-06T05:23:55" tests="1" file="/home/alan/softnesia/Pijar2/authService/pijar-auth-api/test/unit/modules/auth-student/repositories/commands/command_handler_test.js" time="0.0010" failures="0">
+    <testcase name="auth-student-commandHandler removeMetaData should return Remove MetaData" time="0.0010" classname="should return Remove MetaData">
+    </testcase>
+  </testsuite>
+  <testsuite name="Meta-command" timestamp="2021-02-06T05:23:55" tests="0" file="/home/alan/softnesia/Pijar2/authService/pijar-auth-api/test/unit/modules/auth-student/repositories/commands/command_test.js" time="0.0000" failures="0">
+  </testsuite>
+  <testsuite name="insertOneUser" timestamp="2021-02-06T05:23:55" tests="1" file="/home/alan/softnesia/Pijar2/authService/pijar-auth-api/test/unit/modules/auth-student/repositories/commands/command_test.js" time="0.0010" failures="0">
+    <testcase name="Meta-command insertOneUser should success to insert data to db" time="0.0010" classname="should success to insert data to db">
+    </testcase>
+  </testsuite>
+  <testsuite name="upsertMetaData" timestamp="2021-02-06T05:23:55" tests="1" file="/home/alan/softnesia/Pijar2/authService/pijar-auth-api/test/unit/modules/auth-student/repositories/commands/command_test.js" time="0.0000" failures="0">
+    <testcase name="Meta-command upsertMetaData should success to upsert data to db" time="0.0000" classname="should success to upsert data to db">
+    </testcase>
+  </testsuite>
+  <testsuite name="upsertMetaData" timestamp="2021-02-06T05:23:55" tests="1" file="/home/alan/softnesia/Pijar2/authService/pijar-auth-api/test/unit/modules/auth-student/repositories/commands/command_test.js" time="0.0000" failures="0">
+    <testcase name="Meta-command upsertMetaData should success to upsert data to db" time="0.0000" classname="should success to upsert data to db">
+    </testcase>
+  </testsuite>
+  <testsuite name="Meta-domain" timestamp="2021-02-06T05:23:55" tests="0" file="/home/alan/softnesia/Pijar2/authService/pijar-auth-api/test/unit/modules/auth-student/repositories/commands/domain_test.js" time="0.0000" failures="0">
+  </testsuite>
+  <testsuite name="removeMetaData" timestamp="2021-02-06T05:23:55" tests="3" file="/home/alan/softnesia/Pijar2/authService/pijar-auth-api/test/unit/modules/auth-student/repositories/commands/domain_test.js" time="0.0030" failures="0">
+    <testcase name="Meta-domain removeMetaData should removeMeta Data success" time="0.0010" classname="should removeMeta Data success">
+    </testcase>
+    <testcase name="Meta-domain removeMetaData should removeMeta Data success" time="0.0010" classname="should removeMeta Data success">
+    </testcase>
+    <testcase name="Meta-domain removeMetaData should removeMeta Data failed" time="0.0010" classname="should removeMeta Data failed">
+    </testcase>
+  </testsuite>
+  <testsuite name="googleRegister" timestamp="2021-02-06T05:23:55" tests="10" file="/home/alan/softnesia/Pijar2/authService/pijar-auth-api/test/unit/modules/auth-student/repositories/commands/domain_test.js" time="0.0110" failures="0">
+    <testcase name="Meta-domain googleRegister should register Data success" time="0.0010" classname="should register Data success">
+    </testcase>
+    <testcase name="Meta-domain googleRegister should register Data error" time="0.0000" classname="should register Data error">
+    </testcase>
+    <testcase name="Meta-domain googleRegister should register Data error" time="0.0010" classname="should register Data error">
+    </testcase>
+    <testcase name="Meta-domain googleRegister should register Data error" time="0.0010" classname="should register Data error">
+    </testcase>
+    <testcase name="Meta-domain googleRegister should register Data error" time="0.0010" classname="should register Data error">
+    </testcase>
+    <testcase name="Meta-domain googleRegister should register Data error" time="0.0020" classname="should register Data error">
+    </testcase>
+    <testcase name="Meta-domain googleRegister should register Data success" time="0.0010" classname="should register Data success">
+    </testcase>
+    <testcase name="Meta-domain googleRegister should register Data error" time="0.0010" classname="should register Data error">
+    </testcase>
+    <testcase name="Meta-domain googleRegister should register Data error" time="0.0010" classname="should register Data error">
+    </testcase>
+    <testcase name="Meta-domain googleRegister should register Data error" time="0.0020" classname="should register Data error">
+    </testcase>
+  </testsuite>
+  <testsuite name="checkEmailGoogle" timestamp="2021-02-06T05:23:55" tests="4" file="/home/alan/softnesia/Pijar2/authService/pijar-auth-api/test/unit/modules/auth-student/repositories/queries/domain_test.js" time="0.0030" failures="0">
+    <testcase name="checkEmailGoogle should return meta data" time="0.0010" classname="should return meta data">
+    </testcase>
+    <testcase name="checkEmailGoogle should meta data failed" time="0.0010" classname="should meta data failed">
+    </testcase>
+    <testcase name="checkEmailGoogle should meta data failed" time="0.0010" classname="should meta data failed">
+    </testcase>
+    <testcase name="checkEmailGoogle should meta data failed" time="0.0000" classname="should meta data failed">
+    </testcase>
+  </testsuite>
+  <testsuite name="getMetaData" timestamp="2021-02-06T05:23:55" tests="2" file="/home/alan/softnesia/Pijar2/authService/pijar-auth-api/test/unit/modules/auth-student/repositories/queries/domain_test.js" time="0.0000" failures="0">
+    <testcase name="getMetaData should cover err" time="0.0000" classname="should cover err">
+    </testcase>
+    <testcase name="getMetaData should success" time="0.0000" classname="should success">
+    </testcase>
+  </testsuite>
+  <testsuite name="auth-student-queryHandler" timestamp="2021-02-06T05:23:55" tests="0" file="/home/alan/softnesia/Pijar2/authService/pijar-auth-api/test/unit/modules/auth-student/repositories/queries/query_handler_test.js" time="0.0000" failures="0">
+  </testsuite>
+  <testsuite name="checkEmailGoogle" timestamp="2021-02-06T05:23:55" tests="1" file="/home/alan/softnesia/Pijar2/authService/pijar-auth-api/test/unit/modules/auth-student/repositories/queries/query_handler_test.js" time="0.0010" failures="0">
+    <testcase name="auth-student-queryHandler checkEmailGoogle should return checkEmailGoogle" time="0.0010" classname="should return checkEmailGoogle">
+    </testcase>
+  </testsuite>
+  <testsuite name="getMetaData" timestamp="2021-02-06T05:23:55" tests="1" file="/home/alan/softnesia/Pijar2/authService/pijar-auth-api/test/unit/modules/auth-student/repositories/queries/query_handler_test.js" time="0.0000" failures="0">
+    <testcase name="auth-student-queryHandler getMetaData should return checkEmailGoogle" time="0.0000" classname="should return checkEmailGoogle">
+    </testcase>
+  </testsuite>
+  <testsuite name="findById" timestamp="2021-02-06T05:23:55" tests="1" file="/home/alan/softnesia/Pijar2/authService/pijar-auth-api/test/unit/modules/auth-student/repositories/queries/query_test.js" time="0.0000" failures="0">
+    <testcase name="findById should return success" time="0.0000" classname="should return success">
+    </testcase>
+  </testsuite>
+  <testsuite name="API Handler Student" timestamp="2021-02-06T05:23:55" tests="0" file="/home/alan/softnesia/Pijar2/authService/pijar-auth-api/test/unit/modules/student/handlers/api_handler_test.js" time="0.0000" failures="0">
+  </testsuite>
+  <testsuite name="Login" timestamp="2021-02-06T05:23:55" tests="2" file="/home/alan/softnesia/Pijar2/authService/pijar-auth-api/test/unit/modules/student/handlers/api_handler_test.js" time="0.0010" failures="0">
+    <testcase name="API Handler Student Login should success" time="0.0010" classname="should success">
+    </testcase>
+    <testcase name="API Handler Student Login should failed" time="0.0000" classname="should failed">
+    </testcase>
+  </testsuite>
+  <testsuite name="Logout" timestamp="2021-02-06T05:23:55" tests="2" file="/home/alan/softnesia/Pijar2/authService/pijar-auth-api/test/unit/modules/student/handlers/api_handler_test.js" time="0.0010" failures="0">
+    <testcase name="API Handler Student Logout should success" time="0.0010" classname="should success">
+    </testcase>
+    <testcase name="API Handler Student Logout should failed" time="0.0000" classname="should failed">
+    </testcase>
+  </testsuite>
+  <testsuite name="getInfo" timestamp="2021-02-06T05:23:55" tests="2" file="/home/alan/softnesia/Pijar2/authService/pijar-auth-api/test/unit/modules/student/handlers/api_handler_test.js" time="0.0020" failures="0">
+    <testcase name="API Handler Student getInfo should success" time="0.0010" classname="should success">
+    </testcase>
+    <testcase name="API Handler Student getInfo should err" time="0.0010" classname="should err">
+    </testcase>
+  </testsuite>
+  <testsuite name="Student Command Handler" timestamp="2021-02-06T05:23:55" tests="0" file="/home/alan/softnesia/Pijar2/authService/pijar-auth-api/test/unit/modules/student/repositories/commands/command_handler_test.js" time="0.0000" failures="0">
+  </testsuite>
+  <testsuite name="login" timestamp="2021-02-06T05:23:55" tests="1" file="/home/alan/softnesia/Pijar2/authService/pijar-auth-api/test/unit/modules/student/repositories/commands/command_handler_test.js" time="0.0000" failures="0">
+    <testcase name="Student Command Handler login should success" time="0.0000" classname="should success">
+    </testcase>
+  </testsuite>
+  <testsuite name="logout" timestamp="2021-02-06T05:23:55" tests="1" file="/home/alan/softnesia/Pijar2/authService/pijar-auth-api/test/unit/modules/student/repositories/commands/command_handler_test.js" time="0.0000" failures="0">
+    <testcase name="Student Command Handler logout should success" time="0.0000" classname="should success">
+    </testcase>
+  </testsuite>
+  <testsuite name="domain student" timestamp="2021-02-06T05:23:55" tests="0" file="/home/alan/softnesia/Pijar2/authService/pijar-auth-api/test/unit/modules/student/repositories/commands/domain_test.js" time="0.0000" failures="0">
+  </testsuite>
+  <testsuite name="login" timestamp="2021-02-06T05:23:55" tests="3" file="/home/alan/softnesia/Pijar2/authService/pijar-auth-api/test/unit/modules/student/repositories/commands/domain_test.js" time="0.0050" failures="0">
+    <testcase name="domain student login should success" time="0.0030" classname="should success">
+    </testcase>
+    <testcase name="domain student login should cover err" time="0.0010" classname="should cover err">
+    </testcase>
+    <testcase name="domain student login should cover err" time="0.0010" classname="should cover err">
+    </testcase>
+  </testsuite>
+  <testsuite name="logout" timestamp="2021-02-06T05:23:55" tests="2" file="/home/alan/softnesia/Pijar2/authService/pijar-auth-api/test/unit/modules/student/repositories/commands/domain_test.js" time="0.0010" failures="0">
+    <testcase name="domain student logout should success" time="0.0000" classname="should success">
+    </testcase>
+    <testcase name="domain student logout should cover err" time="0.0010" classname="should cover err">
+    </testcase>
+  </testsuite>
+  <testsuite name="domain query student" timestamp="2021-02-06T05:23:55" tests="0" file="/home/alan/softnesia/Pijar2/authService/pijar-auth-api/test/unit/modules/student/repositories/queries/domain_test.js" time="0.0000" failures="0">
+  </testsuite>
+  <testsuite name="getCached" timestamp="2021-02-06T05:23:55" tests="2" file="/home/alan/softnesia/Pijar2/authService/pijar-auth-api/test/unit/modules/student/repositories/queries/domain_test.js" time="0.0000" failures="0">
+    <testcase name="domain query student getCached should success" time="0.0000" classname="should success">
+    </testcase>
+    <testcase name="domain query student getCached should cover err" time="0.0000" classname="should cover err">
+    </testcase>
+  </testsuite>
+  <testsuite name="query handler student" timestamp="2021-02-06T05:23:55" tests="0" file="/home/alan/softnesia/Pijar2/authService/pijar-auth-api/test/unit/modules/student/repositories/queries/query_handler_test.js" time="0.0000" failures="0">
+  </testsuite>
+  <testsuite name="getCached" timestamp="2021-02-06T05:23:55" tests="1" file="/home/alan/softnesia/Pijar2/authService/pijar-auth-api/test/unit/modules/student/repositories/queries/query_handler_test.js" time="0.0010" failures="0">
+    <testcase name="query handler student getCached should success" time="0.0010" classname="should success">
+    </testcase>
+  </testsuite>
+  <testsuite name="api handler teacher" timestamp="2021-02-06T05:23:55" tests="0" file="/home/alan/softnesia/Pijar2/authService/pijar-auth-api/test/unit/modules/teacher/handlers/api_handler_test.js" time="0.0000" failures="0">
+  </testsuite>
+  <testsuite name="login" timestamp="2021-02-06T05:23:55" tests="2" file="/home/alan/softnesia/Pijar2/authService/pijar-auth-api/test/unit/modules/teacher/handlers/api_handler_test.js" time="0.0020" failures="0">
+    <testcase name="api handler teacher login should success" time="0.0010" classname="should success">
+    </testcase>
+    <testcase name="api handler teacher login should err" time="0.0010" classname="should err">
+    </testcase>
+  </testsuite>
+  <testsuite name="Logout" timestamp="2021-02-06T05:23:55" tests="2" file="/home/alan/softnesia/Pijar2/authService/pijar-auth-api/test/unit/modules/teacher/handlers/api_handler_test.js" time="0.0020" failures="0">
+    <testcase name="api handler teacher Logout should success" time="0.0010" classname="should success">
+    </testcase>
+    <testcase name="api handler teacher Logout should failed" time="0.0010" classname="should failed">
+    </testcase>
+  </testsuite>
+  <testsuite name="getInfo" timestamp="2021-02-06T05:23:55" tests="2" file="/home/alan/softnesia/Pijar2/authService/pijar-auth-api/test/unit/modules/teacher/handlers/api_handler_test.js" time="0.0020" failures="0">
+    <testcase name="api handler teacher getInfo should success" time="0.0010" classname="should success">
+    </testcase>
+    <testcase name="api handler teacher getInfo should err" time="0.0010" classname="should err">
+    </testcase>
+  </testsuite>
+  <testsuite name="commandHandler teacher" timestamp="2021-02-06T05:23:55" tests="2" file="/home/alan/softnesia/Pijar2/authService/pijar-auth-api/test/unit/modules/teacher/repositories/commands/command_handler_test.js" time="0.0010" failures="0">
+    <testcase name="commandHandler teacher should login success" time="0.0000" classname="should login success">
+    </testcase>
+    <testcase name="commandHandler teacher should logout success" time="0.0010" classname="should logout success">
+    </testcase>
+  </testsuite>
+  <testsuite name="domain teacher" timestamp="2021-02-06T05:23:55" tests="0" file="/home/alan/softnesia/Pijar2/authService/pijar-auth-api/test/unit/modules/teacher/repositories/commands/domain_test.js" time="0.0000" failures="0">
+  </testsuite>
+  <testsuite name="login" timestamp="2021-02-06T05:23:55" tests="4" file="/home/alan/softnesia/Pijar2/authService/pijar-auth-api/test/unit/modules/teacher/repositories/commands/domain_test.js" time="0.0030" failures="4">
+    <testcase name="domain teacher login should success teacher" time="0.0020" classname="should success teacher">
+      <failure message="Cannot read property &apos;get&apos; of undefined" type="TypeError"><![CDATA[TypeError: Cannot read property 'get' of undefined
+    at Query.upstreamGetCredential (bin/modules/teacher/repositories/queries/query.js:23:29)
+    at Teacher.login (bin/modules/teacher/repositories/commands/domain.js:23:37)
+    at Context.<anonymous> (test/unit/modules/teacher/repositories/commands/domain_test.js:19:20)
+    at processImmediate (internal/timers.js:439:21)
+    at process.topLevelDomainCallback (domain.js:130:23)]]></failure>
+    </testcase>
+    <testcase name="domain teacher login should success admin" time="0.0010" classname="should success admin">
+      <failure message="Attempted to wrap upstreamGetCredential which is already wrapped" type="TypeError"><![CDATA[TypeError: Attempted to wrap upstreamGetCredential which is already wrapped
+    at checkWrappedMethod (node_modules/sinon/lib/sinon/util/core/wrap-method.js:39:21)
+    at wrapMethod (node_modules/sinon/lib/sinon/util/core/wrap-method.js:85:13)
+    at Object.stub (node_modules/sinon/lib/sinon/stub.js:65:44)
+    at Context.<anonymous> (test/unit/modules/teacher/repositories/commands/domain_test.js:26:13)
+    at processImmediate (internal/timers.js:439:21)
+    at process.topLevelDomainCallback (domain.js:130:23)
+--------------
+Error: Stack Trace for original
+    at wrapMethod (node_modules/sinon/lib/sinon/util/core/wrap-method.js:110:31)
+    at Object.stub (node_modules/sinon/lib/sinon/stub.js:65:44)
+    at Context.<anonymous> (test/unit/modules/teacher/repositories/commands/domain_test.js:10:13)
+    at processImmediate (internal/timers.js:439:21)
+    at process.topLevelDomainCallback (domain.js:130:23)]]></failure>
+    </testcase>
+    <testcase name="domain teacher login should cover err" time="0.0000" classname="should cover err">
+      <failure message="Attempted to wrap upstreamGetCredential which is already wrapped" type="TypeError"><![CDATA[TypeError: Attempted to wrap upstreamGetCredential which is already wrapped
+    at checkWrappedMethod (node_modules/sinon/lib/sinon/util/core/wrap-method.js:39:21)
+    at wrapMethod (node_modules/sinon/lib/sinon/util/core/wrap-method.js:85:13)
+    at Object.stub (node_modules/sinon/lib/sinon/stub.js:65:44)
+    at Context.<anonymous> (test/unit/modules/teacher/repositories/commands/domain_test.js:42:13)
+    at processImmediate (internal/timers.js:439:21)
+    at process.topLevelDomainCallback (domain.js:130:23)
+--------------
+Error: Stack Trace for original
+    at wrapMethod (node_modules/sinon/lib/sinon/util/core/wrap-method.js:110:31)
+    at Object.stub (node_modules/sinon/lib/sinon/stub.js:65:44)
+    at Context.<anonymous> (test/unit/modules/teacher/repositories/commands/domain_test.js:10:13)
+    at processImmediate (internal/timers.js:439:21)
+    at process.topLevelDomainCallback (domain.js:130:23)]]></failure>
+    </testcase>
+    <testcase name="domain teacher login should cover err" time="0.0000" classname="should cover err">
+      <failure message="Attempted to wrap upstreamGetCredential which is already wrapped" type="TypeError"><![CDATA[TypeError: Attempted to wrap upstreamGetCredential which is already wrapped
+    at checkWrappedMethod (node_modules/sinon/lib/sinon/util/core/wrap-method.js:39:21)
+    at wrapMethod (node_modules/sinon/lib/sinon/util/core/wrap-method.js:85:13)
+    at Object.stub (node_modules/sinon/lib/sinon/stub.js:65:44)
+    at Context.<anonymous> (test/unit/modules/teacher/repositories/commands/domain_test.js:58:13)
+    at processImmediate (internal/timers.js:439:21)
+    at process.topLevelDomainCallback (domain.js:130:23)
+--------------
+Error: Stack Trace for original
+    at wrapMethod (node_modules/sinon/lib/sinon/util/core/wrap-method.js:110:31)
+    at Object.stub (node_modules/sinon/lib/sinon/stub.js:65:44)
+    at Context.<anonymous> (test/unit/modules/teacher/repositories/commands/domain_test.js:10:13)
+    at processImmediate (internal/timers.js:439:21)
+    at process.topLevelDomainCallback (domain.js:130:23)]]></failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="logout" timestamp="2021-02-06T05:23:55" tests="2" file="/home/alan/softnesia/Pijar2/authService/pijar-auth-api/test/unit/modules/teacher/repositories/commands/domain_test.js" time="0.0010" failures="0">
+    <testcase name="domain teacher logout should success" time="0.0000" classname="should success">
+    </testcase>
+    <testcase name="domain teacher logout should cover err" time="0.0010" classname="should cover err">
+    </testcase>
+  </testsuite>
+  <testsuite name="domain teacher" timestamp="2021-02-06T05:23:55" tests="2" file="/home/alan/softnesia/Pijar2/authService/pijar-auth-api/test/unit/modules/teacher/repositories/queries/domain_test.js" time="0.0020" failures="0">
+    <testcase name="domain teacher should get cached success" time="0.0010" classname="should get cached success">
+    </testcase>
+    <testcase name="domain teacher should get cached err" time="0.0010" classname="should get cached err">
+    </testcase>
+  </testsuite>
+  <testsuite name="queryHandler teacher" timestamp="2021-02-06T05:23:55" tests="1" file="/home/alan/softnesia/Pijar2/authService/pijar-auth-api/test/unit/modules/teacher/repositories/queries/query_handler_test.js" time="0.0010" failures="0">
+    <testcase name="queryHandler teacher should getCached success" time="0.0010" classname="should getCached success">
+    </testcase>
+  </testsuite>
+</testsuites>
